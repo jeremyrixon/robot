@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/robot.js"></script>
+</head>
+<body>
+<div id="welcome">
+    <h2>Welcome to your robot!</h2>
+    <p>Control your robot by adding commands to the command queue below and then executing them.</p>
+</div>
+<hr>
+<div id="add-commands">
+    <h3>Add one or more commands to the command queue here:</h3>
+    <div>
+        <label for="command-select">Add command to queue:</label>
+        <select name="commands" id="command-select">
+            <option value="">--Please choose an option--</option>
+            <option value="PLACE">Place</option>
+            <option value="MOVE">Move</option>
+            <option value="LEFT">Left</option>
+            <option value="RIGHT">Right</option>
+            <option value="REPORT">Report</option>
+        </select>
+    </div>
+
+    <div id="place-options">
+        <div>
+            <label for="x-select">X:</label>
+            <select name="x" id="x-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div>
+            <label for="y-select">Y:</label>
+            <select name="y" id="y-select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div>
+            <label for="facing-select">Facing:</label>
+            <select name="facing" id="facing-select">
+                <option value="NORTH">North</option>
+                <option value="SOUTH">South</option>
+                <option value="EAST">East</option>
+                <option value="WEST">West</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <button id="add-command">Add command to queue</button>
+    </div>
+
+</div>
+<hr>
+<div>
+    <h3>These are the commands that are queued:</h3>
+    <div id="command-queue">
+        <blockquote id="command-queue-block"></blockquote>
+    </div>
+    <div>
+        <button id="execute-command-queue">Execute Queued Commands</button>
+    </div>
+    <div>
+        <button id="clear-command-queue">Clear Command Queue</button>
+    </div>
+</div>
+<hr>
+<div>
+    <h3>These are the results of the execution:</h3>
+    <div id="results">
+        <blockquote id="results-block"></blockquote>
+    </div>
+</div>
+<hr>
+</body>
+</html>

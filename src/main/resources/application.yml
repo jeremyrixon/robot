@@ -1,0 +1,7 @@
+spring:
+  application:
+    name:
+      Robot
+server:
+  port: 8080
+table.size: 5
